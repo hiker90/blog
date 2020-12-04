@@ -18,11 +18,12 @@ layout: default
       <a href="{{ post.url | relative_url }}" class="image featured"><img src="/post-img/{{ post.category }}/{{ post.image }}" alt="{{ post.title }}"></a>
     {% endif %}
     {% if post.preview != 0 %}
-      <p>{{ post.content | truncatewords: 35 }}</p>
+      <!-- <p>{{ post.content | truncatewords: 35 }}</p> -->
+      <p>{{post.excerpt | remove: '<p>' | remove: '</p>'}}<p>
     {% endif %}
     <footer> 
       <ul class="actions">
-        <!-- <li><a href="{{ post.url | relative_url }}" class="button big">Читать Далее</a></li> -->
+        <li><a href="{{ post.url | relative_url }}" class="button big">阅读全文</a></li>
       </ul>
       <ul class="stats">
         <li><a class="icon" href="{{ site.baseurl }}/{{ post.category }}"><i class="fas fa-fw fa-folder"></i> {{ post.category }}</a></li>
