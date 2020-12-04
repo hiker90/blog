@@ -1,51 +1,3 @@
-# Future Imperfect Theme on Jekyll
->by [Kapitonenko](https://kaptn.ru)
-
-<https://future-imperfect.kaptn.ru> - demo  
-<https://github.com/kaptn3/future-imperfect/> - repository
-
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
-![Future Imperfect Theme preview](https://cdn.rawgit.com/kaptn3/blog/4ccc6d6a/readme_files/screen.png)
-
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Content management](#content-management)
-    - [Template](#template)
-    - [Example of post](#example-of-post)
-    - [Category page](#category-page)
-4. [Features](#features)
-    - [Categories](#categories)
-    - [Comments](#comments)
-    - [Icons](#icons)
-    - [Post Image](#post-image)
-    - [Featured image](#featured-image)
-    - [Edit link](#edit-link)
-    - [Web analytics](#web-analytics)
-5. [Upgrading Theme](#upgrading-theme)
-6. [Thanks to the following](#thanks-to-the-following)
-7. [Todo](#todo)
-8. [Donate](#donate)
-9. [Copyright and license](#copyright-and-license)
-
-## Installation 
-1. Download, clone or fork repo `git clone git@github.com:kaptn3/blog.git`
-2. Enter the folder: `cd blog/` 
-3. Start Jekyll server: `jekyll s`
-
-Access, [localhost:4000](http://localhost:4000)
-
-## Usage
-If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
-
-If you have any questions please ask me at [GitHub Issues](https://github.com/kaptn3/future-imperfect/issues).
-
-## Content management
-### Template
-Template of posts setting is in `_drafts/template.md`. `Layout` is always named `post`. `Title` is a title of post, writing in quotation marks. `Date` written in the following format: `yyyy-mm-dd hh:mm`. In `category` specifies one category. In `icon` written the name of icon (its in the folder `images`). In `tags` is possible to write multiple tags using a comma. In `image` specify the path to image preview (can not fill). And in `preview` you can write `0` to on the main page didn't show the announcement of the post. 
-
-More details about all features and setting can be view on [here](#features).
-
 ### Example of post
 ```
 layout: post
@@ -70,8 +22,6 @@ permalink: /category1/
 {% include category.html %}
 ```
 
-You can see example in [here](https://github.com/kaptn3/future-imperfect/blob/master/category1) or [here](https://github.com/kaptn3/blog/blob/master/category2).
-
 ## Features
 ### Categories
 In blog page, we categorize posts into several categories by url, all category pages use same template html file - `_includes/category.html`. Links of category in menu is in `_data.links.yml`.
@@ -89,10 +39,9 @@ All images used in posts that are in `post-image` and its are categorized. For e
 
 ### Featured image
 You can specify the preview image for post in [YAML Front Matter](http://jekyllrb.com/docs/frontmatter/). In front matter called "image" to indicate the name of the image. The picture must be located in a category folder.    
-For example, we write post of category_name's category. In folder `post-img/category_name` put the preview image with the title "1.png" and in front matter write: `image: 1.png`. [Example](https://github.com/kaptn3/future-imperfect/blob/master/_posts/2017-06-08-learn-git4.md).
+For example, we write post of category_name's category. In folder `post-img/category_name` put the preview image with the title "1.png" and in front matter write: `image: 1.png`.
 
-Also, in front matter you can control the announcement of record post. By default, the announcement consists of 35 words. Writing in the front matter called "preview" the number 0, the announcement will not be displayed for this entry. [Example](https://github.com/kaptn3/blog/blob/master/_posts/2017-06-08-learn-git4.md).
-
+Also, in front matter you can control the announcement of record post. By default, the announcement consists of 35 words. Writing in the front matter called "preview" the number 0, the announcement will not be displayed for this entry. 
 ### Edit link
 All posts can be edited by users through link: `github.com/kaptn3/future-imperfect/edit/master/{{ page.path }}` or `github.com/kaptn3/blog/edit/master/{{ post.path }}`. 
 
@@ -113,26 +62,13 @@ Pull in the latest changes
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
 
 ## Thanks to the following
+[Kapitonenko](https://kaptn.ru)
 [Jekyll](http://jekyllrb.com/)  
 [HTML5Up](https://html5up.net/)  
 [Font Awesome](http://fontawesome.io/icons/)  
 [HyperComments](http://hypercomments.com)
 
-## TODO
-- [ ] Add 404 page
-- [ ] Search system
-- [x] Add fontawesome 5
-- [ ] Add paginator
-
-## Donate
-In `includes/donate.html` you'll see form for donation, includes in every post.  
-Also if this project let you enjoy your blog time, you can give me a cup of coffee :)
-
-[Donate =)](https://money.yandex.ru/to/410013162271067/10)
-
 ## Copyright and license
 The theme is taken Future Imperfect Theme from [HTML5 UP](https://html5up.net).
 
 It is under [the MIT license](/LICENSE).
-
-Enjoy :yum:

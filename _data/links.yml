@@ -1,6 +1,6 @@
 # blog page sections
-- name: category1
-  href: '/category1/'
+- name: 日志
+  href: '/blogs/'
 
-- name: category2
-  href: '/category2/'
+- name: 关于
+  href: '/about/'
