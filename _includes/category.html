@@ -17,10 +17,21 @@
             }
     </style>
 
-
 <section>
+    <header>
+        {% for cat in site.categories %}
+        {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
+        {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
+        <a class="cat-chip button small" href="#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{cat[0]}}</a>
+        {% endfor %}
+    </header>
+</section>
+<section>
+    {% for cat in site.categories %}
+    <hr />
+    <h2 id="{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">{{cat[0]}}</h2>
     <ul class="posts">
-    	{% for post in site.categories.[category] %}
+        {% for post in cat[1] %}
     	<li>
     		<article>
     			<header>
@@ -32,4 +43,5 @@
     	</li>
     	{% endfor %}
     </ul>
+    {% endfor %}
 </section>

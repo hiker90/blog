@@ -1,0 +1,18 @@
+<!-- about.html -->
+
+{% assign category = page.url | remove:'/' %} <!-- category - переменная из адреса сайта -->
+    <header>
+        <h1 class="cat-header" style="text-align: center;">{{category}}</h1>
+    </header>
+
+    <style>
+      .cat-header:after {
+          background: #2ebaae;
+          content: '';
+          display: block;
+          height: 2px;
+          margin: 0.75em auto 0 auto;
+          position: relative;
+          width: 4em;
+          }
+    </style>

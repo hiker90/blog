@@ -20,20 +20,20 @@
 
     <main class="page-content" aria-label="Content">
       <div id="main">
-        {{ content }}        
+        {{ content }}
       </div>
     </main>
     {% if page.title %}
      {% include footer.html %}
     {% else %}
       {% include index-footer.html %}
-    {% endif %}    
+    {% endif %}
     </div>
 
   </body>
 
   <!-- Scripts -->
-      <script defer src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/js/all.js"></script>
+      <script defer src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
       <script src="{{"/assets/js/skel.min.js" | prepend: site.baseurl}}"></script>
       <script src="{{"/assets/js/util.js" | prepend: site.baseurl}}"></script>
       <!--[if lte IE 8]><script src="{{"/assets/js/ie/respond.min.js" | prepend: site.baseurl}}"></script><![endif]-->
